@@ -3,7 +3,7 @@ import Footer from "@component/components/footer";
 import Image from "next/image";
 import amyInItaly from "../../public/amy-in-italy.jpg"
 
-export function LearnMoreCard({
+function LearnMoreCard({
   title,
   description,
 }: {
