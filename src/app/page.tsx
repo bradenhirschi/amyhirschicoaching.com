@@ -1,7 +1,8 @@
 import Navbar from "@component/components/navbar";
 import Footer from "@component/components/footer";
 import Image from "next/image";
-import amyInItaly from "../../public/amy-in-italy.jpg"
+import amyInItaly from "../../public/amy-in-italy.jpg";
+import background from "../../public/background.jpeg";
 
 function LearnMoreCard({
   title,
@@ -13,8 +14,8 @@ function LearnMoreCard({
   return (
     <div>
       <Image src={amyInItaly} alt="Amy in Italy" />
-      <h3 className="py-4">{title}</h3>
-      <p>{description}</p>
+      <h3 className="py-4 uppercase font-bold">{title}</h3>
+      <p className="text-gray-800">{description}</p>
     </div>
   );
 }
@@ -24,26 +25,31 @@ export default function Home() {
     <main>
       <Navbar />
 
-      <section className="bg-gray-300 grid grid-cols-1 lg:grid-cols-2 p-48">
-        <div className="flex flex-col pr-12">
-          <h1 className="text-white font-serif font-thin mb-4">
-            Are you struggling with your adopted child? You&apos;ll love my free
-            guide, 3 STEPS to a BETTER RELATIONSHIP
-          </h1>
-          <a className="button">Grab your free copy!</a>
+      <div className="relative">
+        <Image src={background} alt="background" className="w-full" priority />
+
+        <div className="bg-gray-800 bg-opacity-50 grid grid-cols-1 lg:grid-cols-2 p-48 absolute top-0 left-0 h-full">
+          <div className="flex flex-col pr-12">
+            <h1 className="text-white font-serif font-thin mb-4">
+              Are you struggling with your adopted child? You&apos;ll love my
+              free guide, 3 STEPS to a BETTER RELATIONSHIP
+            </h1>
+            <a className="button">Grab your free copy!</a>
+          </div>
         </div>
-      </section>
+      </div>
 
       <section className="px-80 py-24 text-center">
-        <h2 className="text-2xl font-serif">
+        <h2 className="font-serif italic font-thin mb-4">
           “The joy we feel has little to do with the circumstances of our lives
           and everything to do with the focus of our lives.”
         </h2>
-        <h3 className="text-xl">- Russell M. Nelson</h3>
+        <h3>- Russell M. Nelson</h3>
       </section>
 
-      <section className="bg-gray-300 px-48 py-12 text-center">
-        <h1 className="text-3xl font-bold mb-12">LEARN MORE</h1>
+      <section className="flex flex-col bg-gray-300 px-48 py-12 items-center text-center">
+        <h1 className="text-3xl font-bold mb-6">LEARN MORE</h1>
+        <div className="h-[4px] w-[80px] bg-pink-400 mb-12"></div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-24">
           <LearnMoreCard
             title={"Hi, I'm Amy"}
