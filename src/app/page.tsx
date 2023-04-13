@@ -39,7 +39,7 @@ export default function Home() {
         </div>
       </div>
 
-      <section className="px-80 py-24 text-center">
+      <section className="bg-gray-100 px-80 py-24 text-center">
         <h2 className="font-serif italic font-thin mb-4">
           “The joy we feel has little to do with the circumstances of our lives
           and everything to do with the focus of our lives.”
@@ -47,9 +47,9 @@ export default function Home() {
         <h3>- Russell M. Nelson</h3>
       </section>
 
-      <section className="flex flex-col bg-gray-300 px-48 py-12 items-center text-center">
+      <section className="flex flex-col px-48 py-12 items-center text-center">
         <h1 className="text-3xl font-bold mb-6">LEARN MORE</h1>
-        <div className="h-[4px] w-[80px] bg-pink-400 mb-12"></div>
+        <div className="h-[4px] w-[80px] bg-dark-gold mb-12"></div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-24">
           <LearnMoreCard
             title={"Hi, I'm Amy"}
@@ -66,9 +66,18 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="hidden">what is life coaching</section>
+      {/* Call to action section */}
+      <section className="bg-gray-100 py-12 px-12 lg:px-48">
+        <div className="grid grid-cols-2 gap-12">
+            <div>
 
-      <section className="hidden">contact</section>
+            </div>
+            <div>
+              <h3 className="mb-4">Need help with something? My e-book can help!</h3>
+              <a className="button">Grab your free copy!</a>
+            </div>
+        </div>
+      </section>
 
       <Footer />
     </main>

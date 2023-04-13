@@ -1,8 +1,11 @@
+import ahLogo from "../../public/ah-logo.png";
+import Image from "next/image";
+
 export default function Navbar() {
   return (
     <nav className="flex h-[75px] items-center px-4 md:px-20 lg:px-32">
       <div className="flex flex-grow">
-        <h2>Amy Hirschi Coaching</h2>
+        <Image src={ahLogo} alt="AH logo" height={50}/>
       </div>
       <div className="">
         <div className="sm:hidden">Menu</div>
@@ -11,7 +14,7 @@ export default function Navbar() {
           <li className="hidden">Services</li>
           <li className="hidden">Coaching</li>
           <li>
-            <a href="mailto:amyhirschi@gmail.com">Contact</a>
+            <a className="button">Grab your free copy!</a>
           </li>
         </ul>
       </div>
