@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function Navbar() {
   return (
-    <nav className="flex h-[75px] items-center px-4 md:px-20 lg:px-32">
+    <nav className="flex h-[65px] items-center px-4 md:px-20 lg:px-32">
       <div className="flex flex-grow">
         <Image src={ahLogo} alt="AH logo" height={50}/>
       </div>

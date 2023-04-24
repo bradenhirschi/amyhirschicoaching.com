@@ -2,18 +2,23 @@ import Navbar from "@component/components/navbar";
 import Footer from "@component/components/footer";
 import Image from "next/image";
 import amyInItaly from "../../public/amy-in-italy.jpg";
+import familyPhoto from "../../public/familyPhoto.jpeg"
 import background from "../../public/background.jpeg";
 
 function LearnMoreCard({
   title,
   description,
+  image,
+  alt
 }: {
   title: string;
   description: string;
+  image: any;
+  alt: string
 }) {
   return (
     <div>
-      <Image src={amyInItaly} alt="Amy in Italy" />
+      <Image src={image} alt={alt} />
       <h3 className="py-4 uppercase font-bold">{title}</h3>
       <p className="text-gray-800">{description}</p>
     </div>
@@ -54,14 +59,18 @@ export default function Home() {
           <LearnMoreCard
             title={"Hi, I'm Amy"}
             description={
-              "I'm a Certified Life Coach, mother of six (both biological and adopted), member of the Church of Jesus Christ of Latter-Day Saints, and believer that we are all capable of creating a life full of joy, peace and fulfillment."
+              "I'm a Certified Life Coach, mother of six by adoption and birth, member of the Church of Jesus Christ of Latter-Day Saints, and believer that we are all capable of creating a life full of joy, peace and fulfillment."
             }
+            image={amyInItaly}
+            alt={"Amy in Italy"}
           />
           <LearnMoreCard
-            title={"I get it"}
+            title={"lorem ipsum"}
             description={
-              "As an adoptive mother, I understand the unique joy, struggle, and full spectrum of emotions that adoptive parents experience. For years, I struggled with feelings of fear, anger, and the inability to be the type of mother I wanted to be."
+              "lorem ipsum justo eget magna fermentum iaculis eu non diam phasellus vestibulum lorem sed risus ultricies tristique nulla aliquet enim tortor at auctor urna nunc id cursus metus aliquam eleifend mi in nulla posuere"
             }
+            image={familyPhoto}
+            alt={"A family photo of the Hirschis"}
           />
         </div>
       </section>
