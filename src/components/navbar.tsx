@@ -14,11 +14,15 @@ export default function Navbar() {
       <div>
         <div className="sm:hidden">Menu</div>
         <ul className="hidden sm:flex flex-row gap-8">
-          <li className="hidden">About</li>
-          <li className="hidden">Services</li>
-          <li className="hidden">Contact</li>
           <li>
-            <CallToActionButton />
+            <Link href="./about" className="navbar-link">
+              About
+            </Link>
+          </li>
+          <li>
+            <Link href="./contact" className="navbar-link">
+              Contact
+            </Link>
           </li>
         </ul>
       </div>

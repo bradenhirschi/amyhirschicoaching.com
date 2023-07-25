@@ -3,7 +3,14 @@
 import { useEffect, useState } from "react";
 import { useRouter, useSearchParams, usePathname } from "next/navigation";
 
-const FeedbackSettings = () => {
+const Contact = () => {
+  {
+    /*
+    # TODO 
+    Figure out what all of this does
+  */
+  }
+
   const router = useRouter();
   const pathname = usePathname();
   const searchParams = useSearchParams();
@@ -22,50 +29,66 @@ const FeedbackSettings = () => {
   if (!success) {
     return (
       <div className="flex justify-center bg-gray-100">
-        <div className="bg-white rounded-lg p-16 m-8">
+        <div className="bg-white rounded-lg p-16 my-4">
           {/* @ts-expect-error will be fixed by TypeScript team soon */}
           <form action={submitFeedback}>
             <div>
               <h1>Get in touch!</h1>
-              <div className="flex flex-col">
-                <div className="mb-1 mt-8 text-sm text-slate-500 dark:text-slate-400">
-                  First name
+              <div className="grid grid-cols-2 mt-8 gap-x-8">
+                <div className="col-span-2 md:col-span-1">
+                  <div className="mb-1 text-sm text-gray-500 dark:text-gray-400">
+                    First name:
+                  </div>
+                  <input
+                    type="text"
+                    required
+                    name="firstName"
+                    className="input mb-8"
+                    placeholder="First Name"
+                  />
                 </div>
 
-                <input
-                  type="text"
-                  required
-                  name="firstName"
-                  className="input mb-8"
-                  placeholder="First Name"
-                />
-
-                <div className="mb-1 text-sm text-slate-500 dark:text-slate-400">
-                  Last name
+                <div className="col-span-2 md:col-span-1">
+                  <div className="mb-1 text-sm text-gray-500 dark:text-gray-400">
+                    Last name:
+                  </div>
+                  <input
+                    type="text"
+                    required
+                    name="lastName"
+                    className="input mb-8"
+                    placeholder="Last name"
+                  />
                 </div>
 
-                <input
-                  type="text"
-                  required
-                  name="lastName"
-                  className="input mb-8"
-                  placeholder="Last name"
-                />
-
-                <div className="mb-1 text-sm text-slate-500 dark:text-slate-400">
-                  Describe your feedback:
+                <div className="col-span-2 ">
+                  <div className="mb-1 text-sm text-gray-500 dark:text-gray-400">
+                    Email:
+                  </div>
+                  <input
+                    type="text"
+                    required
+                    name="email"
+                    className="input mb-8 w-full"
+                    placeholder="Email"
+                  />
                 </div>
-                <textarea
-                  required
-                  rows={6}
-                  name="body"
-                  placeholder="What feedback do you have?"
-                  className="input mb-8"
-                />
 
-                <div className="flex justify-end">
-                  <button type="submit">
-                    <span>Submit</span>
+                <div className="col-span-2">
+                  <div className="text-sm text-gray-500 dark:text-gray-400">
+                    Message:
+                  </div>
+                  <textarea
+                    required
+                    rows={6}
+                    name="body"
+                    placeholder="What can I help you with?"
+                    className="input mb-8 w-full"
+                  />
+                </div>
+                <div className="w-full flex justify-center col-span-2">
+                  <button type="submit" className="button">
+                    <span>Send message</span>
                   </button>
                 </div>
               </div>
@@ -92,4 +115,4 @@ const FeedbackSettings = () => {
   }
 };
 
-export default FeedbackSettings;
+export default Contact;
