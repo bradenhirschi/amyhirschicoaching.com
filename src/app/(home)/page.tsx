@@ -29,7 +29,7 @@ export default function Home() {
     <>
       <div className="relative">
         <Image src={background} alt="background" className="w-full" priority />
-        <div className="bg-gray-800 bg-opacity-60 grid grid-cols-1 lg:grid-cols-2 p-48 absolute top-0 left-0 h-full">
+        <div className="bg-gray-800 bg-opacity-60 sm:grid sm:grid-cols-1 lg:grid-cols-2 p-8 sm:p-48 sm:absolute sm:top-0 sm:left-0 sm:h-full">
           <div className="flex flex-col pr-12">
             <h1 className="text-white font-serif font-thin mb-4">
               Get all the tools you need to unlock your potential in EVERY area
@@ -40,7 +40,7 @@ export default function Home() {
         </div>
       </div>
 
-      <section className="bg-gray-100 px-80 py-24 text-center">
+      <section className="bg-gray-100 p-8 sm:px-80 sm:py-24 text-center">
         <h3 className="font-serif italic font-thin mb-4">
           “The joy we feel has little to do with the circumstances of our lives
           and everything to do with the focus of our lives.”
@@ -48,10 +48,10 @@ export default function Home() {
         <h4>- Russell M. Nelson</h4>
       </section>
 
-      <section className="flex flex-col px-48 py-12 items-center text-center">
+      <section className="flex flex-col p-8 sm:px-48 sm:py-12 items-center text-center">
         <h1 className="text-3xl font-bold mb-6">ABOUT ME</h1>
         <div className="h-[4px] w-[80px] bg-dark-gold mb-12"></div>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-24">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-24">
           <LearnMoreCard
             title={"Hi, I'm Amy"}
             description={
