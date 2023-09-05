@@ -3,6 +3,9 @@ import amyInItaly from "/public/amy-in-italy.jpg";
 import familyPhoto from "/public/familyPhoto.jpeg";
 import background from "/public/background.jpeg";
 import CallToActionButton from "@component/components/callToActionButton";
+import "./styles.css";
+import layeredWaves from "/public/layered-waves-haikei.svg";
+import footerWaves from "/public/footer-wave.svg";
 
 function LearnMoreCard({
   title,
@@ -71,16 +74,21 @@ export default function Home() {
         </div>
       </section>
 
+      <Image className="waves" alt="waves svg" src={layeredWaves} />
+
       {/* Call to action section */}
       <section className="bg-gray-100 py-12 px-12 lg:px-48">
-        <div className="grid grid-cols-2 gap-12">
-          <div></div>
+        <div className="flex justify-center">
           <div>
-            <h3 className="mb-4">Need direction in your life? I can help!</h3>
+            <h3 className="mb-4">
+              Looking for a little more direction in your life? I can help!
+            </h3>
             <CallToActionButton />
           </div>
         </div>
       </section>
+
+      <Image className="waves" alt="waves svg" src={footerWaves} />
     </>
   );
 }

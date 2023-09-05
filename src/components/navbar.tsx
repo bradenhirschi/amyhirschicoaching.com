@@ -14,7 +14,7 @@ export default function Navbar() {
       <div>
         <div className="sm:hidden">Menu</div>
         <ul className="hidden sm:flex flex-row gap-8">
-          <li>
+          <li className="hidden">
             <Link href="./about" className="navbar-link">
               About
             </Link>
