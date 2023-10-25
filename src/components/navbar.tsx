@@ -1,4 +1,4 @@
-import ahLogo from "../../public/ah-logo.png";
+import ahLogo from "../../public/ah-logo.svg";
 import Image from "next/image";
 import Link from "next/link";
 
