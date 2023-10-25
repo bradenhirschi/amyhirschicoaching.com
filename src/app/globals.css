@@ -10,6 +10,10 @@
   @apply uppercase text-gray-600;
 }
 
+.social-links a {
+  @apply rounded-full p-3 bg-white text-black;
+}
+
 .input {
   @apply rounded-lg p-1 border border-gray-200;
 }
