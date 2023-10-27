@@ -12,7 +12,7 @@ export default function Footer() {
             <BsFacebook size={24} />
           </a>
         </nav>
-        <p>Copyright © 2023 Amy Hirschi</p>
+        <p>&copy; {new Date().getFullYear()} Amy Hirschi</p>
       </div>
     </footer>
   );
